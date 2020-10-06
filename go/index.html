@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>跳转中,请稍后</title>
+</head>
+<body>
+<h1>跳转中,请稍后</h1>
+<script type="text/javascript">
+setTimeout(function(){
+var url;
+if(location.href.indexOf('?')==-1||location.href.indexOf('url=',location.href.indexOf('?')+1)==-1)
+	url='/';
+else url=location.href.substr(location.href.indexOf('url=',location.href.indexOf('?')+1)+4);
+location.href = url;
+}, 1000);
+</script>
+</body>
+</html>

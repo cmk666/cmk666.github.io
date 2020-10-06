@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="/css/all/css" />
+<title>搜索</title>
+</head>
+<body>
+<h1>搜索</h1>
+<hr />
+<div style="width:100%;text-align:center;">
+<input type="text" id="content" value="" style="width:100%" />
+<br /><button onclick="search();">搜索</button>
+<script>
+function search(){
+var type, preurl;
+if(location.href.indexOf('?')==-1||location.href.indexOf('type=',location.href.indexOf('?')+1)==-1)
+	type='baidu';
+else type=location.href.substr(location.href.indexOf('type=',location.href.indexOf('?')+1)+5);
+preurl = ( type == 'baidu'       ) ? '//www.baidu.com/s?wd='                              :
+         ( type == 'baidufanyi1' ) ? '//fanyi.baidu.com/#zh/en/'                          :
+         ( type == 'baidufanyi2' ) ? '//fanyi.baidu.com/#en/zh/'                          :
+         ( type == 'baidutupian' ) ? '//image.baidu.com/search/index?tn=baiduimage&word=' :
+         ( type == 'luogu'       ) ? '//www.luogu.com.cn/problem/list?keyword='           :
+         ( type == 'mcwiki'      ) ? '//searchwiki.biligame.com/mc/?search='              :
+         ( type == 'mcmod'       ) ? '//www.mcmod.cn/s?key='                              :
+                                     '//www.baidu.com/s?wd='                              ;
+location.href = "/go/?url=" + preurl + document.getElementById('content').value;
+}
+</script>
+</div>
+<hr />
+<div id="browser">
+<script type="text/javascript" src="/js/browser.js"></script>
+<script type="text/javascript">
+browser_=getbrowser()
+document.getElementById("browser").innerHTML="你正在使用"+browser_+"浏览器"
+</script>
+</body>
+</html>
