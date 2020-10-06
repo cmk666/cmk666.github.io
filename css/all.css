@@ -1,0 +1,3 @@
+a:link, a:visited { color: blue; text-decoration: none; }
+a:hover, a:active { color: blue; text-decoration: underline; }
+div#browser { text-align: right; }
