@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>随机抽取学生</title>
+<style type="text/css">
+html, body, div#text
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+}
+div#text
+{
+	font: 250px bold;
+	/*vertical-align: middle;*/
+	text-align: center;
+	/*display: inline-block;*/
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div id="text"></div>
+<script type="text/javascript">
+var a = new Array("陈铭凯", "陈昱蕲", "程梦冉", "顾盛杰", "胡清哲", "黄文栋", "金纯卉", "孔择轶", "李俊烨", "林璟柔", "林韵琦", "罗星棋", "欧晓鸥", "钱米乐", "羊古君月", "俞钲阳", "张恩佳", "张圣涵", "赵心怡", "朱杭之");
+//---
+var t = document.getElementById("text");
+var l = a.length;
+var x = null;
+function r()
+{
+	t.innerHTML = a[Math.floor(Math.random() * l)];
+}
+t.onclick = function()
+{
+	if ( x == null )
+	{
+		x = setInterval(r, 50);
+		console.log("start interval : " + x);
+	}
+	else
+	{
+		clearInterval(x);
+		console.log("end interval : " + x);
+		x = null;
+	}
+}
+</script>
+</body>
+</html>
