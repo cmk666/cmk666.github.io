@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <title>cmk666&#39;s Blog</title>
+  <link rel="icon" href="">
+  <link rel="stylesheet" href="/css/semantic.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/katex.min.css" integrity="sha384-Juol1FqnotbkyZUT5Z7gUPjQ9gzlwCENvUZTpQBAPxtusdwFLRy382PSDx5UUJ4/" crossorigin="anonymous">
+  <script src="/js/main.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/katex.min.js" integrity="sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body style="height: max-content;" class="ui-col">
+  <div id="dark-mode" onclick="dark_mode()">
+    🌓
+  </div>
+  <div class="ui-header ui-shadow" style="transition: all 0.3s ease; padding: 20px; background: var(--header-bgcol); z-index: 10; height: 60px; width: 100%;">
+    <div class="ui-row ui-space-between">
+  <div>
+    <a href="/" style="color: var(--header-col);">cmk666&#39;s Blog</a>
+  </div>
+  <div class="ui-row">
+    
+    <div class="ui-row-space"></div>
+    <a href="/archives/" style="color: var(--header-col); margin: 2px;">
+      Archives
+    </a>
+    
+  </div>
+</div>
+  </div>
+  <div class="ui-col-space-big"></div>
+  <div class="ui-col" style="height: max-content;">
+    <div class="content">
+      <div class="ui-col">
+  <div class="ui-card ui-shadow" style="font-size: 40px; padding: 20px 80px;">
+  <p style=" color: var(--title-col);">cmk666's Blog</p>
+</div>
+  <div class="ui-col-space-big"></div>
+  <div class="ui-col">
+  
+  
+  <div class="ui-full-width ui-card ui-shadow">
+    <div class="ui-row ui-space-between ui-padding">
+      <div>
+        <h3>cf-interactive</h3>
+        创建于2023-07-10
+      </div>
+      <div>
+        <a href="/cf-interactive/" style="padding: 10px;">
+          MORE...
+        </a>
+      </div>
+    </div>
+    
+    <div class="ui-col-line"></div>
+    <div class="ui-padding">
+      <p>不定时更新。只放 Hard Version。按难度排序。</p>
+<h2 id="1089c-2500"><a class="markdownIt-Anchor" href="#1089c-2500"></a> 1089C *2500</h2>
+<p>维护一个答案集合，初始所有点都在里面。</p>
+<p>每次选一个到其他点距离和最小的点，容易发现这样一次能排除一半的点。这样只用询问 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\log n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">n</span></span></span></span> 次就行了。</p>
+<p>可以 floyd 预处理所有距离，这样显然总的是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 的。<a target="_blank" rel="noopener" href="//codeforces.com/contest/1089/submission/195240026">submission</a>。</p>
+<h2 id="1773i-2500"><a class="markdownIt-Anchor" href="#1773i-2500"></a> 1773I *2500</h2>
+<p>预处理出所有阶乘，暴力建出决策树即可。</p>
+<p>可能会 TLE，要打表前若干层的决策。<a target="_blank" rel="noopener" href="//codeforces.com/contest/1773/submission/185401801">submission</a>。</p>
+    </div>
+    
+  </div>
+  
+  <div class="ui-col-space-big"></div>
+  
+  
+  
+    <div class="ui-row ui-space-around ui-full-width">
+  
+  
+  
+</div>
+  
+</div>
+</div>
+    </div>
+    <div class="ui-col-space-mid"></div>
+    <div>
+      <div class="ui-col">
+  <p style="color: #eee; padding: 20px 30px;">
+    Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>,
+    theme by <a target="_blank" rel="noopener" href="https://gitlab.com/ftt2333/hexo-theme-facter">Facter</a>
+  </p>
+</div>
+    </div>
+    <div class="ui-col-space-mid"></div>
+  </div>
+</body>
+
+</html>
