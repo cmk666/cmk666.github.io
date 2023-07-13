@@ -6,6 +6,7 @@
   --code-bgcol: rgba(34, 34, 34, .8);
   --font-col: #010101;
   --title-col: #444;
+  --border-col: #aaa;
   --background-img: url(https://www.dmoe.cc/random.php);
   --dark-mode-bgcol: #100f2c;
   --header-col-rev: #eaeaea;
@@ -15,8 +16,15 @@
   --code-bgcol-rev: rgba(34, 34, 34, .8);
   --font-col-rev: #eaeaea;
   --title-col-rev: #eaeaea;
+  --border-col: #555;
   --background-img-rev: url(https://www.dmoe.cc/random.php);
   --dark-mode-bgcol-rev: #eee;
+}
+
+blockquote {
+  border-left: 3px rgba(0, 0, 0, .2) solid;
+  padding-left: 10px;
+  margin: 10px 0 10px;
 }
 
 *:not(pre *):not(code *):not(a) {
@@ -30,6 +38,14 @@
 
 *:not(.katex *) {
   font-family: myFont;
+}
+
+.title {
+  color: var(--font-col) !important;
+  font-family: myFont !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  user-select: none;
 }
 
 .katex-display {
@@ -100,7 +116,7 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
 }
 
-.content {
+.ui-content {
   width: max(350px, 70%);
 }
 
@@ -200,4 +216,14 @@ body {
   align-items: center;
   user-select: none;
   z-index: 114514;
+}
+
+.content {
+  border: 2px solid var(--border-col);
+  border-radius: 5px;
+  padding: 0 20px !important;
+}
+
+.accordion {
+  margin: 0 0 1em;
 }

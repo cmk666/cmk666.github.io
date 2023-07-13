@@ -5,14 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width = device-width, initial-scale = 1.0">
   <title>cmk666&#39;s Blog</title>
-  <link rel="icon" href="">
-  <link rel="stylesheet" href="/css/semantic.min.css">
+  <link rel="icon" href="/img/favicon.ico">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.2/semantic.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.2/semantic.min.js"></script>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/prism.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/katex.min.css" integrity="sha384-Juol1FqnotbkyZUT5Z7gUPjQ9gzlwCENvUZTpQBAPxtusdwFLRy382PSDx5UUJ4/" crossorigin="anonymous">
   <script src="/js/main.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/katex.min.js" integrity="sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O" crossorigin="anonymous"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ],
+        throwOnError : false
+      });
+    });
+  </script>
 <meta name="generator" content="Hexo 5.4.2"></head>
 
 <body style="height: max-content;" class="ui-col">
@@ -36,7 +51,7 @@
   </div>
   <div class="ui-col-space-big"></div>
   <div class="ui-col" style="height: max-content;">
-    <div class="content">
+    <div class="ui-content">
       <div class="ui-col ui-full">
   <div class="ui-card ui-shadow" style="font-size: 40px; padding: 20px 80px;">
     <p style=" color: var(--title-col);">Archives</p>
@@ -73,6 +88,7 @@
   
   
 </div>
+
   </div>
   <div class="ui-col-space-big"></div>
   
