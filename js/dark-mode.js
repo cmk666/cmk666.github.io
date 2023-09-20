@@ -11,6 +11,9 @@ function dark_mode() {
 	});
 	localStorage.setItem("dark-mode", is_dark_mode = is_dark_mode === "light" ? "dark" : "light");
 }
-var x = localStorage.getItem("dark-mode");
-x || localStorage.setItem("dark-mode", x = "light");
-x === "dark" && dark_mode();
+
+(() => {
+	var x = localStorage.getItem("dark-mode");
+	x || localStorage.setItem("dark-mode", x = "light");
+	x === "dark" && dark_mode();
+})();

@@ -20,4 +20,4 @@ const load_dropdown = (ele, items) => {
 		menu.animate({bottom: 0}, 250);
 		arrow.css('transform', 'rotate(0deg)');
 	});
-};
+};	

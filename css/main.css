@@ -1,6 +1,6 @@
 :root {
   --header-col: #444;
-  --header-bgcol: rgba(255, 255, 255, .85);
+  --header-bgcol: rgba(255, 255, 255, 1);
   --card-bgcol: rgba(255, 255, 255, .8);
   --innercode-bgcol: rgba(255, 255, 255, .8);
   --code-bgcol: rgba(34, 34, 34, .8);
@@ -297,4 +297,5 @@ body {
   z-index: -1;
   cursor: pointer;
   background-color: var(--header-bgcol);
+  transition: all 0.3s ease;
 }
