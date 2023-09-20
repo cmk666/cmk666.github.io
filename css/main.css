@@ -266,8 +266,7 @@ body {
 
 .dropdown-menu {
   position: absolute;
-  z-index: 1;
-  top: 50px;
+  z-index: -2;
   background-color: var(--card-bgcol);
   border-width: 0 1px 1px 1px;
   border-style: solid;
@@ -289,4 +288,13 @@ body {
   clip-path: polygon(50% 60%, 33% 40%, 67% 40%);
   background-color: var(--font-col);
   transition: transform 0.2s ease;
+}
+
+.dropdown-back {
+  position: absolute;
+  top: 0;
+  height: 50px;
+  z-index: -1;
+  cursor: pointer;
+  background-color: var(--header-bgcol);
 }
