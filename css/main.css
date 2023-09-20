@@ -1,13 +1,13 @@
 :root {
   --header-col: #444;
-  --header-bgcol: rgba(255, 255, 255, .9);
+  --header-bgcol: rgba(255, 255, 255, .85);
   --card-bgcol: rgba(255, 255, 255, .8);
   --innercode-bgcol: rgba(255, 255, 255, .8);
   --code-bgcol: rgba(34, 34, 34, .8);
   --font-col: #010101;
   --title-col: #444;
   --border-col: #aaa;
-  --background-img: url(https://www.dmoe.cc/random.php);
+  --background-img: url(https://www.loliapi.com/acg);
   --dark-mode-bgcol: #100f2c;
   --header-col-rev: #eaeaea;
   --header-bgcol-rev: rgba(34, 34, 34, 1);
@@ -17,7 +17,7 @@
   --font-col-rev: #eaeaea;
   --title-col-rev: #eaeaea;
   --border-col-rev: #555;
-  --background-img-rev: url(https://www.dmoe.cc/random.php);
+  --background-img-rev: url(https://www.loliapi.com/acg);
   --dark-mode-bgcol-rev: #eee;
 }
 
@@ -57,6 +57,8 @@ blockquote {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 114514;
+  vertical-align: bottom;
 }
 
 .ui-col {
@@ -70,6 +72,7 @@ blockquote {
   display: flex;
   align-items: center;
   height: 100%;
+  padding-top: 2px;
 }
 
 .ui-col-space {
@@ -226,4 +229,64 @@ body {
 
 .accordion {
   margin: 0 0 1em;
+}
+
+
+#title {
+  padding: 20px 80px;
+}
+
+#blog-title {
+  color: var(--title-col);
+  margin: 10px;
+  font-size: 40px;
+  text-align: center;
+}
+
+#hitokoto-content {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+}
+
+#hitokoto-from {
+  text-align: right;
+  margin: 0;
+  font-size: 10px;
+}
+
+.dropdown-main {
+  vertical-align: middle;
+  user-select: none;
+}
+
+.dropdown-title {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  background-color: var(--card-bgcol);
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: var(--card-bgcol);
+  border-radius: 0 0 10px 10px;
+}
+
+.dropdown-item {
+  display: block;
+  text-align: center;
+  color: var(--font-col);
+  padding: 5px 3px;
+}
+
+.dropdown-icon {
+  float: right;
+  width: 20px;
+  height: 20px;
+  clip-path: polygon(50% 60%, 33% 40%, 67% 40%);
+  background-color: var(--font-col);
+  transition: transform 0.2s ease;
 }
