@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="/css/prism.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/katex.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+  <link href="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
   <script src="/js/main.js"></script>
   <script src="/js/dropdown.js"></script>
   <script src="/js/dark-mode.js"></script>
@@ -22,8 +25,9 @@
   <div id="dark-mode" onclick="dark_mode()">
     🌓
   </div>
-  <div class="ui-header ui-shadow" style="transition: all 0.3s ease; padding: 20px; background: var(--header-bgcol); height: 50px; width: 100%;">
-    <div class="ui-row ui-space-between">
+  <div id="body">
+    <div class="ui-header ui-shadow" style="transition: all 0.3s ease; padding: 20px; background: var(--header-bgcol); height: 50px; width: 100%;">
+      <div class="ui-row ui-space-between">
   <div>
     <a href="/" style="color: var(--header-col); font-size: 20px;">cmk666&#39;s Blog</a>
   </div>
@@ -60,30 +64,17 @@
   </div>
 </div>
 
-  </div>
-  <div class="ui-col-space-big"></div>
-  <div class="ui-col" style="height: max-content;">
-    <div class="ui-content">
-      <div class="ui-col">
+    </div>
+    <div class="ui-col-space-big"></div>
+    <div class="ui-col" style="height: max-content;">
+      <div class="ui-content">
+        <div class="ui-col">
   <div class="ui-card ui-shadow" id="title">
   <p id="blog-title">cmk666's Blog</p>
+  <p id="hitokoto-content"></p>
+  <p id="hitokoto-from"></p>
 </div>
-<script>
-$(() => {
-  $.get('https://v1.hitokoto.cn', (data, status) => {
-    if (status !== 'success') {
-      console.error('Failed to get hitokoto: ' + status);
-      return;
-    }
-    $('#blog-title').after(
-      $('<p></p>').attr('id', 'hitokoto-content').text(data.hitokoto),
-      $('<p></p>').attr('id', 'hitokoto-from').text(
-        '--' + (data.from ? data.from : '') + ' ' + (data.from_who ? data.from_who : '')
-      )
-    );
-  });
-});
-</script>
+<script>"use strict";$(function(){$.get("https://v1.hitokoto.cn",function(o,t){if("success"!==t)return void console.error("Failed to get hitokoto: "+t);$("#blog-title").after($("#hitokoto-content").text(o.hitokoto),$("#hitokoto-from").text("--"+(o.from?o.from:"")+" "+(o.from_who?o.from_who:"")))})});</script>
   <div class="ui-col-space-big"></div>
   <div class="ui-col">
   
@@ -167,17 +158,18 @@ $(() => {
 </div>
 
 </div>
-    </div>
-    <div class="ui-col-space-mid"></div>
-    <div>
-      <div class="ui-col">
+      </div>
+      <div class="ui-col-space-mid"></div>
+      <div>
+        <div class="ui-col">
   <p style="color: #eee; padding: 20px 30px;">
     Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>,
     theme by <a target="_blank" rel="noopener" href="https://gitlab.com/ftt2333/hexo-theme-facter">Facter</a>
   </p>
 </div>
+      </div>
+      <div class="ui-col-space-mid"></div>
     </div>
-    <div class="ui-col-space-mid"></div>
   </div>
 </body>
 

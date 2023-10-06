@@ -1,7 +1,1 @@
-$(() => {
-	console.log('ftt2333 AK IOI!!!!!');
-	$('.ui.accordion').accordion();
-	$('.ui.dropdown').dropdown({
-		on: 'click'
-	});
-});
+"use strict";$(document).pjax("a[target!=_blank]","#body",{fragment:"#body"}),NProgress.configure({showSpinner:!1}),$(document).on("pjax:start",NProgress.start),$(document).on("pjax:complete",NProgress.done),$(function(){console.log("ftt2333 AK IOI!!!!!"),$(".ui.accordion").accordion(),$(".ui.dropdown").dropdown({on:"click"})});

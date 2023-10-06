@@ -57,7 +57,7 @@ blockquote {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 114514;
+  z-index: 114;
   vertical-align: bottom;
 }
 
@@ -298,4 +298,9 @@ body {
   cursor: pointer;
   background-color: var(--header-bgcol);
   transition: all 0.3s ease;
+}
+
+#body {
+  min-width: 100%;
+  min-height: 100%;
 }
